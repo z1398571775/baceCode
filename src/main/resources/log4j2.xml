@@ -10,7 +10,7 @@
         <!-- %logger{36} 表示 Logger 名字最长36个字符 -->
         <property name="LOG_PATTERN" value="%date{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n" />
         <!-- 定义日志存储的路径 -->
-        <property name="FILE_PATH" value="/home/java/log" />
+        <property name="FILE_PATH" value="/home/java/log/baseCode" />
         <property name="FILE_NAME" value="baseCode" />
     </Properties>
 
@@ -20,7 +20,7 @@
             <!--输出日志的格式-->
             <PatternLayout pattern="${LOG_PATTERN}"/>
             <!--控制台只输出level及其以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
-            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
         </console>
 
 
