@@ -1,10 +1,21 @@
 server:
   port: 9002
 spring:
+  application:
+    name: baseCode
   datasource:
     password: root
     username: root
     url: jdbc:mysql://47.103.79.58:3306/blob?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
     driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.103.79.58:8848
+      config:
+        server-addr: 47.103.79.58:8848
+mybatis:
+  mapper-locations: classpath:com/example/basecode/moduls/**/mapper/xml/*.xml
 mybatis-plus:
-  mapper-locations: classpath*:/mapper/**/*.xml
+  mapper-locations:
+    - classpath*:com/example/basecode/moduls/**/mapper/xml/*.xml
